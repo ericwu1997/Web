@@ -1,0 +1,488 @@
+/* Calendar */
+
+#calendar {
+    border-collapse: collapse;
+	background-color: white;
+	font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	margin-top: 15px;
+	margin-bottom: 20px;
+    width: 99.9%;
+}
+#calendar table, th, td {
+	border: 1px solid #878787;
+}
+#calendar th:first-child {
+	position: relative;
+}
+#calendar th:not(:only-child) {
+	background-color: #757575;
+	color: white;
+	font-family: "Conv_agency-fb", Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-weight: normal;
+	height: 100%;
+	text-shadow: 1px 1px 0px #000000;
+	padding: 5px 0;
+}
+#calendar td {
+	height: calc(100vw / 7 * 1.06);
+	margin: 0;
+	width: calc(100%/7);
+}
+
+/* Calendar Nav */
+#calendar_nav{
+    display: flex;
+    overflow: auto;
+    font-family: "Conv_agency-fb", Helvetica, sans-serif;
+    margin-top: 65px;
+}
+#calendar_nav h1{
+    font-weight: 100;
+    margin: 0;
+    color: grey;
+}
+#today_tab{
+    flex: 1;
+    font-size: 4vw;
+    margin: auto;
+    text-align: center;
+}
+#diplay_date{
+    margin: auto;
+    flex: 2;
+    text-align: center;
+    font-size: 3vw;
+}
+#expand_tab{
+    flex: 1;
+}
+#expand_tab img, #today_tab img {
+    width: 43px;
+	height: 48px;
+    display: block;
+    margin: auto;
+    bottom: 0;
+}
+
+/* Day of the Week Heading */
+#calendar_days_headings {
+	background-color: #8E8E8E;
+	color: #E1E1E1;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/* Month Selector */
+#calendar th:only-child {
+	border: 1px solid white;
+	font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	padding: 13px 0;
+}
+#month {
+	color: grey;
+	font-size: 30px;
+	font-weight: 100;
+	vertical-align: middle;
+}
+
+/* Single Day Visuals */
+.dot {
+    -webkit-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    flex: 1;
+	font-size: 3vw;
+    pointer-events: none;
+    text-align: center;
+}
+.day{
+    pointer-events: none;
+}
+.dot_container {
+    display: flex;
+    pointer-events: none;
+    width: 100%;
+}
+.selected_date{
+    /*background-color: #B0E77A !important;*/
+    /*box-shadow: 2px 2px 0px white inset, -2px -2px 0px white inset;*/
+	/*background: linear-gradient(180deg, #B0E77A 50%, white 50%);*/
+	background-image: url("../img/greenBgCal.png");
+	background-size: 100% 100%;
+}
+.not_past{}
+.greyout_date{
+    background-color: #E7E7E7;
+	box-shadow: 1px 1px 1px #FFFFFF inset, -1px -1px 1px #FFFFFF inset;
+	color: #747474;
+	font-size: 0.75em;
+	text-align: center;
+}
+td:not(.greyout_date) {
+	font-size: 1.125em;
+	text-align: center;
+}
+.not_clickable{
+    pointer-events: none;
+}
+.startDate_selected{
+    background-color: greenyellow;
+}
+.endDate_selected{
+    background-color: coral;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 600px) {
+    /* header */
+	@font-face {
+		font-family: 'Conv_agency-fb';
+		src: url('../assets/agency-fb.eot');
+		src: local('☺'), url('../assets/agency-fb.woff') format('woff'), url('../assets/agency-fb.ttf') format('truetype'), url('../assets/agency-fb.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}	
+
+	@font-face {
+		font-family: 'Conv_SanFranciscoText-Regular';
+		src: url('../assets/SanFranciscoText-Regular.eot');
+		src: local('☺'), url('../assets/SanFranciscoText-Regular.woff') format('woff'), url('../assets/SanFranciscoText-Regular.ttf') format('truetype'), url('../assets/SanFranciscoText-Regular.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+	body { /* Changed */
+		font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	}
+	
+    #calander_container{
+        display: none;
+    }
+    #mobile_meal_planner_nav {
+        background-color: #719c6e;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+    }
+	
+    /* meal builder */
+    #meal_title{
+        font-size: 50px;
+        position: relative;
+        width: 94%;
+        height: 50px;
+        margin: 0 auto 0 auto;
+        overflow: hidden;
+    }
+    #meal_title div{
+        width: 100%;
+        position: absolute;
+    }
+    #meal_time_title{
+        left: 100%;
+    }
+    #meal_builder{
+        width: 95%;
+        margin: 0 2% 0 3%;
+    }
+    #meal_builder div > img{
+        width: 100%;
+        height: 100%;
+    }
+    #meal_time_block > div{
+        position: relative;
+        width: 98%;
+        height: 40vw;
+        margin: 0 0 5px 0;
+    }
+    #meal_option{
+        margin: 0;
+    }
+    #meal_option > div{
+        position: relative;
+        width: 98%;
+        height: 40vw;
+        margin: 0 0 5px 0;
+    }
+    #meal_option div > h1{
+        bottom: 2px;
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		margin: 0 0 0 0;
+		font-weight: normal;
+		font-size: 38px;
+		color: white;
+        pointer-events: none;
+		text-shadow: 3px 3px 15px #000000;
+    }
+	#default_title, #meal_time_title {
+		font-size: 45px;
+		color: #8DC289;
+	}
+	#meal_title {
+		padding-bottom: 10px;
+	}
+	
+    .add_sign{
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 10vw;
+        text-align: center;
+        margin: 0;
+    }
+	.title_overlay {
+		font-size: 45px;
+		font-weight: normal;
+        height: 0;
+        position: absolute;
+        top: 4px;
+        left: 12px;
+        text-align: center;
+        margin: 0;
+		color: white;
+		text-shadow: 2px 2px 1px #000000;
+        pointer-events: none;
+	}
+    .remove_sign{
+        font-size: 50px;
+		font-weight: normal;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        text-align: center;
+        margin: 0;
+		color: white;
+		text-shadow: 1px 1px 1px #000000;
+    }
+    #breakfast, #lunch, #dinner {
+		border-radius: 3px;
+		box-shadow: 2px 1px 3px #000000;
+	}
+    #meal_option{
+        height: calc(120vw + 15px);
+        display: none;
+    }
+	#meal_option img{
+		border-radius: 3px;
+		box-shadow: 2px 1px 3px #000000;
+	}
+    #PC_exit{
+        display: none;
+    }
+    #next{
+        float: right;
+    }
+	#affiliates {
+        background-color: #719c6e ;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+    #affiliates button {
+        background-color: transparent;
+        border: 0;
+        color: white;
+        font-size: 2.5em;
+        width: 100%;
+    }
+    #affiliates button:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    #affiliates a {
+        color: white;
+        display: block;
+        height: 100%;
+        text-decoration: none;
+        width: 100%;
+    }
+    #previous, #next {
+        background-color: transparent;
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        height: 30px;
+        width: 23px;
+        padding: 0;
+    }
+    #next {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+    }
+    #previous {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    #previous img, #next img {
+        height: 30px;
+        width: 23px;
+    }
+
+}
+/* PC */
+
+@media only screen and (min-width: 600px) {
+    body { /* Changed */
+		font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	}
+    /* hide mobile */
+    
+    #mobile_header {
+        display: none;
+    }
+    #expand_tab {
+        display: none;
+    }
+    #meal_option{
+        display: none;
+    }
+    #meal_title{
+        display: none;
+    }
+		
+	#meal_builder{
+		display: none;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.6);
+	}
+	#meal_time_block{
+		display: flex;
+		position: relative;
+		background-color: #fefefe ;
+		margin: 0 auto 0 auto;
+		padding: 0;
+		width: 80%;
+		height: 11;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		-webkit-animation-name: animatetop;
+		-webkit-animation-duration: 0.4s;
+		animation-name: animatetop;
+		animation-duration: 0.4s
+	}
+	#meal_option{
+		display: none;
+		position: relative;
+		overflow-y: scroll;
+		background-color: #fefefe ;
+		margin: 0 auto 0 auto;
+		padding: 0;
+		width: 80vw;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		-webkit-animation-name: animatetop;
+		-webkit-animation-duration: 0.4s;
+		animation-name: animatetop;
+		animation-duration: 0.4s
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
+	#meal_time_block > div{
+		width: 26vw;
+		position: relative;
+		height: 10vw;
+		flex: 1;
+	}
+	#meal_time_block > div h2{
+		position: absolute;
+		top: 0;
+		right: 10px;
+		margin: 0;
+		font-size: 50px;
+	}
+	#meal_time_block > div h1{
+		bottom: 0;
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		margin: auto 0 auto 0;
+	}
+	#meal_time_block img{
+		width: 100%;
+		height: 100%;
+	}
+	#meal_option > div{
+		flex: 1;
+		float: left;
+		height: 10vw;
+	}
+	#meal_option > div img{
+		width: 100%;
+		height: 100%;
+	}
+	#meal_option > div h1{
+		text-align: center;
+		width: 33%;
+		margin: 0;
+        bottom: 2px;
+		position: absolute;
+		text-align: center;
+		font-weight: normal;
+		font-size: 38px;
+		color: white;
+		text-shadow: 3px 3px 15px #000000;
+	}
+    .title_overlay {
+        color: white;
+		font-size: 45px;
+		font-weight: normal;
+        height: 0;
+        position: absolute;
+        top: 4px;
+        left: 12px;
+        text-align: left;
+        margin: 0;
+		color: white;
+		text-shadow: 2px 2px 1px #000000;
+        pointer-events: none;
+	}
+    .remove_sign{
+        font-size: 50px;
+		font-weight: normal;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        text-align: center;
+        margin: 0;
+		color: white;
+		text-shadow: 1px 1px 1px #000000;
+    }
+    #PC_exit{
+        position: absolute;
+        right: 5%;
+        width: 60px;
+        height: 60px;
+        background-color: red;
+        text-align: center;
+        color: white;
+        font-size: 50px;
+    }
+    td {
+        height: 80px;
+        width: 45px;
+        border: solid 1px #787878;
+        margin: 0;
+        vertical-align: top;
+        text-align: right;
+    }
+}

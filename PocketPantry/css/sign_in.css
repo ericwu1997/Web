@@ -1,0 +1,75 @@
+/* mobile */
+
+@media only screen and (max-width: 600px) {
+	/* font */
+	@font-face {
+		font-family: 'Conv_agency-fb';
+		src: url('../assets/agency-fb.eot');
+		src: local('☺'), url('../assets/agency-fb.woff') format('woff'), url('../assets/agency-fb.ttf') format('truetype'), url('../assets/agency-fb.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	body {
+		background-color: #F9F3EF;
+		background-size: cover;
+	}
+	main {
+		max-height: 100vh;
+	}
+
+	/* Logo */
+	#title_container {
+		margin: auto;
+		width: 20vh;
+	}
+	#landing_logo {
+		height: 100%;
+		width: 100%;
+	}
+	/* Title Backdrop */
+	#content_container {
+		background-image: url("../img/homePageGlassBg.jpg");
+		background-size: 100% 100%;
+		border-radius: 8px;
+		margin: auto;
+		margin-top: -20%;
+		min-height: 60vh;
+		padding: 10px 0;
+		width: 80vw;
+	}
+	/* Title */
+	#content_container {
+		color: white;
+		font-family: "Conv_agency-fb", Helvetica, sans-serif;
+		font-size: 15vw;
+		font-weight: normal;
+		text-align: center;
+		text-shadow: 1px 1px 1px #000000;
+	}
+	.first_letter {
+		font-size: 1.8em;
+	}
+	#content_container p:first-child {
+		margin: 20% 0 -3% 0;
+	}
+	#content_container p {
+		margin: 0;
+	}
+	/* Google Sign In Button */
+	#sign_in_container {
+		border-radius: 4px;
+		width: 250px;
+		position: absolute;
+		bottom: 3%;
+		left: 50%;
+		margin-left: -125px;
+	}
+	#sign_in_container input {
+		border-radius: 4px;
+		box-shadow: 1px 2px 3px #000000, 0 0 0 10px #FFFFFF inset;
+		margin: auto;
+		width: 250px;
+	}
+	
+}

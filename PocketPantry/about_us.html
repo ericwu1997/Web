@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pocket Pantry - Affiliates</title>
+	
+	<link rel="stylesheet" href="./css/main_style_mobile.css">
+	<link rel="stylesheet" href="./css/about_us.css">
+    <link rel="manifest" href="http://students.bcitdev.com/A01005523/comp2910/PocketPantry/manifest.json">
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script src="js/fbconnect.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	
+    <!-- Drop down meanu file v -->
+	<link rel="stylesheet" href="./css/dropdown_menu.css">
+    <script src="js/dropdown_menu.js"></script>
+    <!-- Drop down meanu file ^ -->
+</head>
+<body>
+	<nav id="mobile_header">
+        <div id="dropdown_toggle">
+            <img src="./img/hamburger-icon.png">
+        </div>
+        <div id="page_name">
+            <h1>About Us</h1>
+        </div>
+        <div id="page_icon">
+            <img src="./img/navbarAU.png">
+        </div>
+	</nav>
+    <nav id="dropdown_content">
+        <a href="./meal_planner.html">
+            <img src="./img/navbarMP.png"> 
+            Meal Planner
+        </a>
+        <a href="./grocery_list.html">
+            <img src="./img/navbarGL.png"> 
+            Grocery List
+        </a>
+        <a href="./affiliates.html">
+            <img src="./img/navbarAff.png"> 
+            Affiliates
+        </a>
+        <a href="./about_us.html" onclick="signOut()">
+            <img src="./img/navbarAU.png"> 
+            About Us
+        </a>
+		<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstudents.bcitdev.com%2FA01005523%2Fcomp2910%2FPocketPantry%2Fmeal_planner.html&amp;src=sdkpreparse">
+			<img src="./img/fbArt.png">
+			Share
+		</a>
+        <a href="#" onclick="signOut()">
+            <img id="transparent_img" src="https://dummyimage.com/50x50/000/fff"> 
+            Sign Out
+        </a>
+        <img id="dropdown_logo" src="./img/navbarPP.png">
+    </nav>
+	
+	<main>
+			
+		<div id="about_us_info">
+			<div id="problem_block">
+				<div class="content_header">The Problem</div>
+				<div class="content_block"><p>Young adults do not effectively plan meals; they make impulse purchases, and thus contribute to 47% of avoidable food waste.</p></div>
+			</div>
+			<div id="objectives_block">
+				<div class="content_header">The Solution</div>
+				<div class="content_block"><p>To encourage zero food waste practices and to reduce overall food waste by changing consumer purchasing habits.</p></div>
+			</div>
+			<div id="features_block">
+				<div class="content_header">Features</div>
+				<div id="default_information"><p>Pocket Pantry is an all-in-one meal planner and grocery list web app that was designed to help you reduce waste!</p></div>
+				<div class="content_list">
+					<img class="content_icon" src="img/mealPlanner.png" alt="meal planner icon" height="135" width="136">
+					<p>Plan your meals for breakfast, lunch and dinner with our easy-to-use meal planner!</p>
+				</div>
+				<div class="content_list">
+					<img class="content_icon" src="img/groceryListIcon.png" alt="grocery list icon" height="139" width="136">
+					<p>Generate grocery lists based on your meal plans, so that you know exactly what you need!</p>
+				</div>
+			</div>
+			<div id="developer_block">
+				<div class="content_header">Meet the Team</div>
+				<div class="developer_list">
+					<img class="portrait_icon" src="img/developerAB.png" alt="Alberto's portrait" height="400" width="376">
+					<p class="developer_title">Product Owner, Lead Designer</p>
+					<p class="developer_name">Alberto Becerra</p>
+					<p class="developer_info">Running tingz since the '60s.</p>
+				</div>
+				<div class="developer_list">
+					<img class="portrait_icon" src="img/developerEL.JPG" alt="Elizabeth's portrait" height="139" width="136">
+					<p class="developer_title">GitHub Gatekeeper</p>
+					<p class="developer_name">Elizabeth Lee</p>
+					<p class="developer_info">You shall not pass!!!</p>
+				</div>
+				<div class="developer_list">
+					<img class="portrait_icon" src="img/developerEW.JPG" alt="Wu's portrait" height="139" width="136">
+					<p class="developer_title">Lead Front-End Developer</p>
+					<p class="developer_name">Eric Wu</p>
+					<p class="developer_info">I like potatoes.</p>
+				</div>
+				<div class="developer_list">
+					<img class="portrait_icon" src="img/developerRL.png" alt="Ryan's portrait" height="139" width="136">
+					<p class="developer_title">Lead Back-End Developer</p>
+					<p class="developer_name">Ryan Liang</p>
+					<p class="developer_info">Loves beautiful code, art, music & cats.</p>
+				</div>
+				<div class="developer_list">
+					<img class="portrait_icon" src="img/developerES.png" alt="Sy's portrait" height="139" width="136">
+					<p class="developer_title">Scrum Master</p>
+					<p class="developer_name">Eric Sy</p>
+					<p class="developer_info">A proud member of an amazing team-- truly a fantastic experience!<br><br>P.S. I also like potatoes.</p>
+				</div>
+			</div>
+			<div id="thanks_block">
+				<div class="content_header">Special Thanks</div>
+				<div class="content_block"><p>We would like to express our gratitude to MetroVancouver and BCIT for giving us this wonderful opportunity. We would also like to show our appreciation to our instructors, TAs and peers for helping us along the way.</p></div>
+			</div>
+		</div>
+	</main>
+
+	<script type="text/javascript" src="js/sign_out.js"></script>
+</body>
+</html>

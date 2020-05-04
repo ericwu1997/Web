@@ -1,0 +1,431 @@
+/* Calendar */
+#calendar {
+    border-collapse: collapse;
+	background-color: white;
+	font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+    width: 99.9%;
+}
+#calendar table, #calendar th, #calendar td {
+	border: 1px solid #878787;
+}
+#calendar th:first-child {
+	position: relative;
+}
+#calendar th:not(:only-child) {
+	background-color: #757575;
+	color: white;
+	font-family: "Conv_agency-fb", Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-weight: normal;
+	height: 100%;
+	text-shadow: 1px 1px 0px #000000;
+	padding: 5px 0;
+}
+#calendar td {
+	height: calc(100vw / 7 * 1.06);
+	margin: 0;
+	width: calc(100%/7);
+}
+
+/* Day of the Week Heading */
+#calendar_days_headings {
+	background-color: #8E8E8E;
+	color: #E1E1E1;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/* Month Selector */
+#calendar th:only-child {
+	border: 1px solid black;
+	background-color: black;
+	padding: 13px 0;
+	
+}
+#month {
+	color: white;
+	font-size: 30px;
+	font-weight: 100;
+	vertical-align: middle;
+	padding: 0 4%;
+}
+
+/* Single Day Visuals */
+.dot {
+    -webkit-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    flex: 1;
+	font-size: 3vw;
+    pointer-events: none;
+    text-align: center;
+}
+.day{
+    pointer-events: none;
+}
+.dot_container {
+    display: flex;
+    pointer-events: none;
+    width: 100%;
+}
+
+.greyout_date{
+    background-color: #E7E7E7;
+	box-shadow: 1px 1px 1px #FFFFFF inset, -1px -1px 1px #FFFFFF inset;
+	color: #747474;
+	font-size: 0.75em;
+	text-align: center;
+}
+#calendar td:not(.greyout_date) {
+	font-size: 1.125em;
+	text-align: center;
+}
+.not_clickable{
+    pointer-events: none;
+}
+.startDate_selected{
+    background-color: greenyellow;
+}
+.endDate_selected{
+    background-color: coral;
+}
+
+/* start and end buttons */
+#start_selector, #end_selector {
+	background-color: #719c6e;
+	border-radius: 3px;
+	border: 0;
+	box-shadow: 1px 1px 1px gray;
+	color: black;
+	display: inline;
+	font-size: 1.2em;
+	height: 30px;
+	width: 25%;
+	padding: 0;
+}
+#start_selector {
+	margin-left: 4%;
+}
+#end_selector {
+	margin-right: 4%;
+}
+
+/* left and right arrows */
+#previous, #next {
+	background-color: transparent;
+	background-repeat:no-repeat;
+	border: none;
+	cursor:pointer;
+	outline:none;
+	height: 30px;
+	padding: 0;
+	width: 23px;
+	vertical-align: middle;
+}
+#previous img, #next img {
+	height: 25px;
+	width: 18px;
+}
+#done_btn{
+    color: white;
+    width: 100%;
+    background-color: darkseagreen;
+	font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+    padding-top: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.date_range_color{
+    background: linear-gradient(180deg, #CCCCCC 50%, #FFB675 50%);
+}
+
+
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+	/* font */
+	@font-face {
+		font-family: 'Conv_agency-fb';
+		src: url('../assets/agency-fb.eot');
+		src: local('☺'), url('../assets/agency-fb.woff') format('woff'), url('../assets/agency-fb.ttf') format('truetype'), url('../assets/agency-fb.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	  
+	@font-face {
+		font-family: 'Conv_SanFranciscoText-Regular';
+		src: url('../assets/SanFranciscoText-Regular.eot');
+		src: local('☺'), url('../assets/SanFranciscoText-Regular.woff') format('woff'), url('../assets/SanFranciscoText-Regular.ttf') format('truetype'), url('../assets/SanFranciscoText-Regular.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* highlight current page (grocery list) */
+	#mobile_grocery_list_nav {
+        background-color: #719c6e;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+    }
+	
+	/* dropdown menu */
+	#affiliates {
+        background-color: #719c6e ;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+    #affiliates button {
+        background-color: transparent;
+        border: 0;
+        color: white;
+        font-size: 2.5em;
+        width: 100%;
+    }
+    #affiliates button:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    #affiliates a {
+        color: white;
+        display: block;
+        height: 100%;
+        text-decoration: none;
+        width: 100%;
+    }
+	/* date range selectors */
+	#grocery_dates {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+        margin-top: 60px;
+	}
+
+	#grocery_dates button {
+		background-color: #98D197;
+		border: 0;
+		border-radius: 3px;
+		box-shadow: 1px 1px 1px gray;
+		font-size: 1.2em;
+		height: 35px;
+		margin: 10px 0 10px 0;
+		padding: 0;
+		width: 150px;
+	}
+	
+	/* categories filters */
+	#grocery_sections {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+	}
+    #grocery_sections th{
+        font-size: 4.5vw;
+    }
+	
+	#categories {
+		font-size: 0.9em;
+		margin: 10px;
+		text-align: center;
+		position: relative;
+		font-family: "Conv_agency-fb", helvetica, sans-serif;
+	}
+	
+	#categories td {
+		width: 20%;
+		position: relative;
+	}
+	
+	.item_num{
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		background-color: darkorange;
+		right: 0;
+		padding-top: 2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		color: white;
+		box-shadow: 2px 2px 5px #000000;
+	}
+
+	.selected_tab{
+		filter: grayscale(100%);
+	}
+
+	#grocery_list tr, #user_added_items tr{
+		height: 50px;
+	}
+	
+	.grocery_icon img {
+		height: 45px;
+		width: 45px;
+	}
+	
+	.grocery_status {
+		bottom: 0;
+		position: absolute;
+		right: 0;
+	}
+	
+	.grocery_status img {
+		height: 20px;
+		width: 20px;
+		-webkit-filter: drop-shadow(1px 1px 1px #000000);
+		filter: drop-shadow(1px 1px 1px #000000);
+	}
+	
+	/* grocery list and user-added items tables */
+	#grocery_list, #user_added_items {
+		border-collapse: collapse;
+		margin: auto;
+		width: 100%;
+	}
+	
+	#grocery_list tr:nth-of-type(odd) {
+		background-color: #D5E8D4;	
+	}
+	
+	#user_added_items tr:nth-of-type(odd) {
+		background-color: #F5C6A9;
+	}
+	
+	#grocery_list td {
+		padding: 5px 0;
+		font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	}
+	
+	#grocery_list td:first-child, #user_added_items td:first-child {
+		text-align: center;
+	}
+	
+	#grocery_list td:nth-child(2) {
+		width: 50%;
+	}
+	
+	#user_added_items td:first-child {
+		width: 13%;
+	}
+	
+	#user_added_items td:nth-child(2) {
+		width: 52%;
+	}
+	
+	#user_added_items td:nth-child(3) {
+		width: 25%;
+	}
+	
+	#user_added_items td:last-child {
+		color: #EC7B7B;
+		font-weight: bold;
+		font-size: 30px;
+		padding: 0;
+		width: 10%;
+	}
+	
+	#errorMessage {
+		color: #EC7B7B;
+		text-align: center;
+	}
+	
+
+	/* added item list */
+	#add_list {
+		margin: auto;
+		width: 100%;
+		font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	}
+  
+	/* Text header for user-added items */
+	#add_list p {
+		text-align: center;
+	}
+	/* adding an item */
+	#add_item {
+		display: flex;
+		margin: 20px auto;
+		width: 95%;
+	}
+	
+	#item_name::placeholder, #item_quantity::placeholder {
+		color: #FFFFFF;
+	}
+	
+	#item_name {
+		border-radius: 5px;
+		color: #FFFFFF;
+		width: 65%;
+	}
+	
+	#item_quantity {
+		border-radius: 5px;
+		color: #FFFFFF;
+		margin: 0 5px;
+		width: 25%;
+	}
+	
+	#update_list {
+		color: #8EC18B;
+		font-size: 40px;
+		font-weight: bold;
+		padding: 0;
+		width: 10%;
+		text-align: center;
+	}
+	
+	.more_items {
+		background-color: #ECA074;
+		border: 0;
+		box-shadow: 1px 1px 1px gray inset;
+		font-size: 20px;
+		padding: 10px;
+		
+	}
+	
+	.more_items::-webkit-input-placeholder {  
+	   text-align: center; 
+	}
+	
+	.more_items:-ms-input-placeholder {  
+		text-align: center; 
+	}
+	
+	/* Food For Thought section */
+	#food_for_thought {
+		text-align: center;
+		font-size: 30px;
+		font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+		width: 90%;
+		margin: auto;
+	}
+
+	.grocery_list_title {
+		font-family: "Conv_agency-fb", helvetica, sans-serif;
+	}
+
+    #easter {
+        display: none;
+        margin-right: 5px;
+    }
+	
+	#thought {
+		font-size: 20px;
+	}
+    #grocery_container{
+        margin-top: 50px;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 600px) {
+    /* hide mobile */
+    
+    #mobile_header {
+        display: none;
+    }
+}

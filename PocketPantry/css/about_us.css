@@ -1,0 +1,146 @@
+/* mobile */
+
+@media only screen and (max-width: 600px) {
+	/* font */
+	@font-face {
+		font-family: 'Conv_agency-fb';
+		src: url('../assets/agency-fb.eot');
+		src: local('☺'), url('../assets/agency-fb.woff') format('woff'), url('../assets/agency-fb.ttf') format('truetype'), url('../assets/agency-fb.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}	
+
+	@font-face {
+		font-family: 'Conv_SanFranciscoText-Regular';
+		src: url('../assets/SanFranciscoText-Regular.eot');
+		src: local('☺'), url('../assets/SanFranciscoText-Regular.woff') format('woff'), url('../assets/SanFranciscoText-Regular.ttf') format('truetype'), url('../assets/SanFranciscoText-Regular.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+    /* General Styling */
+	#about_us_title, .content_header, .developer_title, .developer_name {
+		font-family: "Conv_agency-fb", Helvetica, sans-serif;
+	}
+	#about_us_info {
+		 font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+	}
+	
+	/* Title Header */
+	#about_us_title{
+		color: #8DC289;
+        font-size: 50px;
+        height: 50px;
+        margin: 5px auto 10px auto;
+        overflow: hidden;
+        position: relative;
+		text-align: center;
+        width: 94%;
+        margin-top: 55px;
+    }
+	
+	/* Content blocks */
+	#about_us_info {
+		margin-top: 50px;
+		padding: 3%;
+	}
+	
+	.content_header {
+		clear: left;
+		color: rgb(238, 124, 72);
+		font-size: 40px;
+	}
+	
+	/* Features list */
+	.content_list {
+		clear: left;
+	}
+	.content_list img {
+		float: left;
+        height: 70px;
+		margin: 0 20px 20px 20px;
+		width: 70px;
+    }
+	.content_list p {
+		margin: 20px;
+	}
+	
+	/* Developers list */
+	#developer_block {
+		text-align: center;
+	}
+	.developer_list {
+		margin-top: 10px;
+	}
+	.developer_title {
+		margin: 0;
+		color: rgb(238, 124, 72);
+		font-weight: normal;
+		font-size: 30px;
+	}
+	.developer_name {
+		color: #8DC289;
+		margin: 0;
+		font-size: 30px;
+	}
+	.developer_info {
+		margin-bottom: 30px;
+	}
+	.portrait_icon {
+		height: 213px;
+		width: 200px;
+	}
+
+	/* Special Thanks */
+	#thanks_block {
+		text-align: center;
+	}
+	
+	/* Drop Down */
+    #affiliates {
+        background-color: #719c6e ;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+    #affiliates button {
+        background-color: transparent;
+        border: 0;
+        color: white;
+        font-size: 2.5em;
+        width: 100%;
+    }
+    #affiliates button:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    #affiliates a {
+        color: white;
+        display: block;
+        height: 100%;
+        text-decoration: none;
+        width: 100%;
+    }
+
+}
+/* PC */
+
+@media only screen and (min-width: 600px) {
+    /* hide mobile */
+    
+    #mobile_header {
+        display: none;
+    }
+    #affiliates_title{
+        display: none;
+    }
+	#expand_educational{
+		display: none;
+	}
+	#expand_behavioral{
+		display: none;
+	}
+	#expand_awareness{
+		display: none;
+	}
+}

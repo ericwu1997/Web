@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pocket Pantry - Sign In</title>
+
+	<link rel="stylesheet" href="./css/main_style_mobile.css">
+	<link rel="stylesheet" href="./css/sign_in.css">
+    <link rel="manifest" href="http://students.bcitdev.com/A01005523/comp2910/PocketPantry/manifest.json">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script src="js/fbconnect.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/detectUserData.js"></script>
+    
+</head>
+<body>
+	<main>
+		<div id="title_container">
+			<img src="img/pocketPantry.png" id="landing_logo" alt="home page logo" height="442" width="374">
+		</div>
+		<div id="content_container">
+			<p><span class="first_letter">P</span>OCKET</p>
+			<p><span class="first_letter">P</span>ANTRY</p>
+		</div>
+		<div id="sign_in_container">
+			<input id="sign_in_button" type="image" src="img/signInWithGoogle.png" onclick="signIn()"/>
+		</div>
+	</main>
+    
+    <script type="text/javascript" src="js/sign_in.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* font */
+@font-face {
+	font-family: 'Conv_agency-fb';
+	src: url('../assets/agency-fb.eot');
+	src: local('☺'), url('../assets/agency-fb.woff') format('woff'), url('../assets/agency-fb.ttf') format('truetype'), url('../assets/agency-fb.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+  
+@font-face {
+	font-family: 'Conv_SanFranciscoText-Regular';
+	src: url('../assets/SanFranciscoText-Regular.eot');
+	src: local('☺'), url('../assets/SanFranciscoText-Regular.woff') format('woff'), url('../assets/SanFranciscoText-Regular.ttf') format('truetype'), url('../assets/SanFranciscoText-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#dropdown_toggle{
+    flex: 1;
+}
+#dropdown_toggle img{
+    display: block;
+    margin: 25% auto 25% auto;
+    width: 45%;
+}
+#page_icon{
+    flex: 1;
+}
+#page_icon img{
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+}
+#page_name{
+    flex: 5;
+    text-align: right;
+    position: relative;
+    font-family: "Conv_agency-fb", Helvetica, sans-serif;
+    color: white;
+}
+#page_name h1{
+    font-weight: 100;
+    font-size: 30px;  
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    margin: 0;
+}
+#dropdown_content{
+    background-color: #81AF7E;
+    width: 55vw;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    display: none;
+    z-index: 2;
+}
+#dropdown_content img{
+    width: 25px;
+}
+#dropdown_content a{
+    float: left;
+    clear: both;
+    text-align: left;
+    width: 94%;
+    margin: 0 3% 0 3%;
+    font-family: "Conv_SanFranciscoText-Regular", helvetica, "Trebuchet MS", sans-serif;
+    font-size: 7vw;
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid;
+    border-color: #73A172;
+    border-width: 2px;
+	padding: 5px 0;
+}    
+#transparent_img{
+    opacity: 0;
+}
+img#dropdown_logo{
+    float: left;
+    clear: both;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    padding: 10px 0;
+}

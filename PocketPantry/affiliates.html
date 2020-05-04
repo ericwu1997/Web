@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pocket Pantry - Affiliates</title>
+	
+	<link rel="stylesheet" href="./css/main_style_mobile.css">
+	<link rel="stylesheet" href="./css/affiliates.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="http://students.bcitdev.com/A01005523/comp2910/PocketPantry/manifest.json">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script src="js/fbconnect.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script type="text/javascript" src="js/detectUserData.js"></script>	
+	
+    <!-- Drop down meanu file v -->
+	<link rel="stylesheet" href="./css/dropdown_menu.css">
+    <script src="js/dropdown_menu.js"></script>
+    <!-- Drop down meanu file ^ -->
+    
+</head>
+<body>
+	<nav id="mobile_header">
+        <div id="dropdown_toggle">
+            <img src="./img/hamburger-icon.png">
+        </div>
+        <div id="page_name">
+            <h1>Affiliates</h1>
+        </div>
+        <div id="page_icon">
+            <img src="./img/navbarAff.png">
+    </div>
+	</nav>
+    <nav id="dropdown_content">
+        <a href="./meal_planner.html">
+            <img src="./img/navbarMP.png"> 
+            Meal Planner
+        </a>
+        <a href="./grocery_list.html">
+            <img src="./img/navbarGL.png"> 
+            Grocery List
+        </a>
+        <a href="./affiliates.html">
+            <img src="./img/navbarAff.png"> 
+            Affiliates
+        </a>
+        <a href="./about_us.html" onclick="signOut()">
+            <img src="./img/navbarAU.png"> 
+            About Us
+        </a>
+		<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstudents.bcitdev.com%2FA01005523%2Fcomp2910%2FPocketPantry%2Fmeal_planner.html&amp;src=sdkpreparse">
+			<img src="./img/fbArt.png">
+			Share
+		</a>
+        <a href="#" onclick="signOut()">
+            <img id="transparent_img" src="https://dummyimage.com/50x50/000/fff"> 
+            Sign Out
+        </a>
+        <img id="dropdown_logo" src="./img/navbarPP.png">
+    </nav>
+   
+	<div id="affiliates">
+		<button><a href="affiliates.html">Affiliates</a></button>
+		<button onclick="signOut()">Sign-Out</button>
+	</div>
+	
+	<main>
+		<div id="affiliates_title">
+			<div id="default_title">Affiliates</div>
+		</div>
+		<div id="affiliates_info">
+			<div id="default_information"><p>Getting to Zero Waste is an ambitious goal that we know it will require many collaborators throughout Vancouver. In order to address the variety of needs that come with the challenge, we are partnering up with these affiliates working with 3 different approaches!</p></div>
+			<div id="default_message">Reducing together!</div>
+		</div>
+		<div id="affiliates_list">
+			<div id="affiliates_block">
+				<div id="expand_educational">Educational <img src="img/arrowUp.png" alt="collapse_arrow" height="52" width="72"></div>
+				<div id="educational_block">
+					<div>
+						<h2>Phoenix Recipes</h2>
+						<img class="affiliate_banner" src="img/phoenixLogo.png" alt="Phoenix Recipes" height="321" width="300">
+						<p>Phoenix Recipes is a recipe web app that helps you find ways to use leftovers. <a class="more_info" href="http://students.bcitdev.com/A00965803/BertysPirateShip/index.html">More info...</a></p>
+					</div>
+				</div>
+				<div id="expand_behavioral">Behavioral <img src="img/arrowUp.png" alt="collapse_arrow" height="52" width="72"></div>
+					<div id="behavioral_block">
+					<div>
+						<h2>Freshness</h2>
+						<img class="affiliate_banner" src="img/freshnessLogo.png" alt="Freshness logo" height="147" width="300">
+						<p>Freshness provides users with preservation methods to keep food fresh. Users can search for preservation methods with text (search bar) or categories (category buttons). <a class="more_info" href="https://freshness.000webhostapp.com/">More info...</a></p>
+					</div>
+				</div>
+				<div id="expand_shopping">Shopping <img src="img/arrowUp.png" alt="collapse_arrow" height="52" width="72"></div>
+					<div id="shopping_block">
+					<div>
+						<h2>GreenDeals</h2>
+						<img class="affiliate_banner" src="img/greendealsLogo.png" alt="GreenDeals logo" height="180" width="300">
+						<p>GreenDeals is a web based platform for grocery stores to advertise and sell produce and food items that are expiring soon. Users can log in and find cheap produce that is expiring soon near them while stores can sign in and add food items. <a class="more_info" href="https://greendeals.me/">More info...</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<script src="js/function_object.js"></script>
+	<script src="js/function_define.js"></script>
+	<script src="js/function_chaining.js"></script>
+
+	
+	<script type="text/javascript" src="js/meal_planner_toggle.js"></script>
+	<script type="text/javascript" src="js/affiliates.js"></script>
+	
+   
+	<script type="text/javascript" src="js/logodropdown.js"></script>
+	<script type="text/javascript" src="js/sign_out.js"></script>
+</body>
+</html>

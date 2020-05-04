@@ -1,0 +1,24 @@
+{
+  "short_name": "Pocket Pantry",
+  "name": "Pocket Pantry",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/pocketPantry.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/pocketPantry.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/pocketPantry.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "meal_planner.html?launcher=true"
+}

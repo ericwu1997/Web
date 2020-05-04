@@ -1,0 +1,32 @@
+.modal-open { 
+	overflow: hidden;
+	position: fixed;
+}
+
+.modalOverlay {
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	background:#000;
+	opacity:0;
+	-webkit-transition: opacity 0.3s ease-in;
+	z-index:101;
+}
+
+.modalWindow {
+	position: absolute;
+	width: 99.9%;
+	top: 50px;
+	left: 0;
+	opacity:0;
+	z-index:102;
+	-webkit-transition: opacity 0.3s ease-in;
+}
+
+.highlight {
+	background-color: #EEA070;
+}

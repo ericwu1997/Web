@@ -1,0 +1,173 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pocket Pantry - Grocery List</title>
+  
+	<link rel="stylesheet" href="./css/main_style_mobile.css">
+	<link rel="stylesheet" href="./css/grocery_list.css">
+	<link rel="stylesheet" href="./css/modal.css">
+
+    <link rel="manifest" href="http://students.bcitdev.com/A01005523/comp2910/PocketPantry/manifest.json">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script src="js/fbconnect.js"></script>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+  <!-- Drop down meanu file v -->
+	<link rel="stylesheet" href="./css/dropdown_menu.css">
+  <script src="js/dropdown_menu.js"></script>
+  <!-- Drop down meanu file ^ -->
+
+</head>
+<body>
+    <nav id="mobile_header">
+        <div id="dropdown_toggle">
+            <img src="./img/hamburger-icon.png">
+        </div>
+        <div id="page_name">
+            <h1>Grocery List</h1>
+        </div>
+        <div id="page_icon">
+            <img src="./img/navbarGL.png">
+        </div>
+	  </nav>
+    <nav id="dropdown_content">
+        <a href="./meal_planner.html">
+            <img src="./img/navbarMP.png"> 
+            Meal Planner
+        </a>
+        <a href="./grocery_list.html">
+            <img src="./img/navbarGL.png"> 
+            Grocery List
+        </a>
+        <a href="./affiliates.html">
+            <img src="./img/navbarAff.png"> 
+            Affiliates
+        </a>
+        <a href="./about_us.html" onclick="signOut()">
+            <img src="./img/navbarAU.png"> 
+            About Us
+        </a>
+		<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstudents.bcitdev.com%2FA01005523%2Fcomp2910%2FPocketPantry%2Fmeal_planner.html&amp;src=sdkpreparse">
+			<img src="./img/fbArt.png">
+			Share
+		</a>
+        <a href="#" onclick="signOut()">
+            <img id="transparent_img" src="https://dummyimage.com/50x50/000/fff"> 
+            Sign Out
+        </a>
+        <img id="dropdown_logo" src="./img/navbarPP.png">
+    </nav>
+	
+	<main>		
+		<div id="grocery_container">
+			<div id="grocery_dates">
+				<button class="popUpBtn">From</button>
+				<button class="popUpBtn">To</button>
+			</div>
+
+			<div id="grocery_sections">
+				<table id="categories">
+					<tr>
+						<th>Dairy</th>
+						<th>Meat</th>
+						<th>Fruits &#38; Veggies</th>
+						<th>Assorted Items</th>
+						<th>Added Items</th>
+					</tr>
+					<tr>
+						<td id="dairy_toggle" onClick="category_select(this.id)">
+							<div class="grocery_icon">
+								<img src="img/coloredDairy.png" alt="all dairy items" width="86" height="97">
+							</div>
+							<div id="dairy_checked" class="grocery_status">
+								<img src="img/groceryListCategoryCheckmark.png" alt="Checkmark" width="71" height="74">
+							</div>
+							<h3 id="dairy_num" class="item_num hide">0</h3>
+						</td>
+						<td id="meat_toggle" onClick="category_select(this.id)">
+							<div class="grocery_icon">
+								<img src="img/coloredMeat.png" alt="all meat items" width="116" height="116">
+							</div>
+							<div id="meat_checked" class="grocery_status">
+								<img src="img/groceryListCategoryCheckmark.png" alt="Checkmark" width="71" height="74">
+							</div>
+							<h3 id="meat_num" class="item_num hide">0</h3>
+						</td>
+						<td id="fruits_vege_toggle" onClick="category_select(this.id)">
+							<div class="grocery_icon">
+								<img src="img/coloredVeggies.png" alt="all fruit & veggie items" width="131" height="126">
+							</div>
+							<div id="fruits_vege_checked" class="grocery_status">
+								<img src="img/groceryListCategoryCheckmark.png" alt="Checkmark" width="71" height="74">
+							</div>
+							<h3 id="fruits_vege_num" class="item_num hide">0</h3>
+						</td>
+						<td id="assorted_items_toggle" onClick="category_select(this.id)">
+							<div class="grocery_icon">
+								<img src="img/coloredOther.png" alt="all added items" width="131" height="122">
+							</div>
+							<div id="assorted_checked" class="grocery_status">
+								<img src="img/groceryListCategoryCheckmark.png" alt="Checkmark" width="71" height="74">
+							</div>
+							<h3 id="assorted_num" class="item_num hide">0</h3>
+						</td>
+						<td id="added_items_toggle" onClick="addedItem_toggle()">
+							<div class="grocery_icon">
+								<img src="img/coloredListAll.png" alt="all items" width="136" height="135">
+							</div>
+							<div id="added_checked" class="grocery_status">
+								<img src="img/groceryListCategoryCheckmark.png" alt="Checkmark" width="71" height="74">
+							</div>		
+							<h3 id="added_num" class="item_num hide">0</h3>
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+			<table id="grocery_list"></table>
+		</div>
+		
+		<div id="add_list">
+			<p>Your items:</p>
+			
+			<table id="user_added_items"></table>
+		</div>
+		
+		<div id="errorMessage"></div>
+		
+		<div id="add_item">
+			<input type="text" id="item_name" class="more_items" placeholder="Add item...">
+			<input type="text" id="item_quantity" class="more_items" placeholder="#">
+			<span id="update_list" onClick="addedItem()">&#43;</span>
+		</div>
+		
+		<div id="food_for_thought">
+			<span class="grocery_list_title">Food For Thought</span>
+			<div id="message"><img src="./img/yellowEgg.png" alt="Easter Egg" id="easter" width="15" height="20"><span  id="thought"></span></div>
+		</div>
+	</main>
+		
+    <script src="js/function_object.js"></script>
+	<script src="js/function_define.js"></script>
+    <script src="js/function_chaining.js"></script>
+	
+	<script type="text/javascript" src="js/retrieve_groceryList_data.js"></script>
+	<script type="text/javascript" src="js/grocery_itemSorting.js"></script>
+	<script type="text/javascript" src="js/drselect.js"></script>
+	<script type="text/javascript" src="js/grocery_calendar_generator.js"></script>
+	<script type="text/javascript" src="js/detectUserData.js"></script>
+	<script type="text/javascript" src="js/meal_planner_toggle.js"></script>
+
+	<script type="text/javascript" src="js/logodropdown.js"></script>
+	<script type="text/javascript" src="js/sign_out.js"></script>
+	
+	<script type="text/javascript" src="js/modalpopup.js"></script>
+	
+</body>
+</html>
