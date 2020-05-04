@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | Bean Around the Block</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="main_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            function resizeIframe(obj) {
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+            $(function(){
+                $('.fadein img:gt(0)').hide();
+                setInterval(function(){
+                    $('.fadein :first-child').fadeOut()
+                        .next('img').fadeIn()
+                        .end().appendTo('.fadein');}, 
+                    3000);
+            });
+        </script>
+    </head>
+    <body>
+         <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Bean Around the Block</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div id="wrap" class="menug">
+        <div id="pagewrap">
+            <br>
+            <div id="logo2"><a href="index.html"><img class="fimage" src="./assets/Static/Logo.png" alt="" onmouseover="this.src='./assets/Static/Logo2.png';" onmouseout="this.src='./assets/Static/Logo.png';"/></a></div>
+            <div class="menuside"></div>
+            <div class="menu currentpage"><a href="products.html">MENU</a></div>
+            <div class="menu"><a href="booking.html">BOOKING</a></div>
+            <div id="logo"><a href="index.html"><img class="fimage" src="./assets/Static/Logo.png" alt="" onmouseover="this.src='./assets/Static/Logo2.png';" onmouseout="this.src='./assets/Static/Logo.png';"/></a></div>
+            <div class="menu"><a href="aboutus.html">ABOUT US</a></div>
+            <div class="menu"><a href="contact.html">CONTACT</a></div>
+            <div class="menuside"></div>
+            <div class="bigclearcontent">
+                <img id="tagline" src="assets/Menu/Tagline.png" alt="tagline"/>
+                <img id="organic" src="assets/Menu/Organic.png" alt="organic"/>
+            </div>
+            <div class="cupcontent">
+                <div class="fadein">
+                    <img src="assets/Menu/Gallery/GirlGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/BeansGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/DonutsGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/FireGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/MuffinsGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/PastriesGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/PourGallery.jpg" alt="">
+                    <img src="assets/Menu/Gallery/SackGallery.jpg" alt="">
+                </div>
+                </div>
+                <div class="headline"><h1>[ Our Menu ]</h1><hr class="fade"></div>
+                <p class="page">&nbsp;</p>
+                <div class="framecontent"><a href="coffee.html" target="iframe_prod">COFFEE</a> | <a href="tea.html" target="iframe_prod">TEA</a> | <a href="pastries.html" target="iframe_prod">PASTRIES</a></div>
+                <iframe src="coffee.html" name="iframe_prod" id="productframe" onload='javascript:resizeIframe(this);'><p>Your browser does not support iframes.</p></iframe>
+
+            </div>
+            <span>&nbsp;</span>
+            <div class="push"></div>
+        </div>
+        <div class="footer">
+            <hr class="fade">
+            <p class="page">&nbsp;</p>
+            <div class="lowline" id="footercontent">
+                <a href="index.html">HOME</a> | <a href="products.html" id="footerpage">MENU</a> | <a href="booking.html">BOOKING</a> | <a href="aboutus.html">ABOUT US</a> | <a href="contact.html">CONTACT</a></div>
+            <div id="socialmedia">
+                <a href=""><img src="assets/Static/FacebookIcon.png" alt=""/></a>
+                <a href=""><img src="assets/Static/TwitterIcon.png" alt=""/></a>
+                <a href=""><img src="assets/Static/InstagramIcon.png" alt=""/></a>
+                <a href=""><img src="assets/Static/YoutubeIcon.png" alt=""/></a>
+                <a href=""><img src="assets/Static/TumblrIcon.png" alt=""/></a>
+                <a href=""><img src="assets/Static//GPlusIcon.png" alt=""/></a>
+            </div>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
