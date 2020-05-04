@@ -1,0 +1,223 @@
+body {
+    margin: auto;
+    padding: 0;
+    background-color: dodgerblue;
+}
+
+#root {
+    margin: auto;
+    width: 60vw;
+    overflow: auto;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.save {
+    position: fixed;
+    width: 100px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.add {
+    position: fixed;
+    right: 120px;
+    width: 100px;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.submit {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.test {
+    overflow: auto;
+    background-color: blue
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    left: 0;
+    bottom: -50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 1;
+    height: 50px;
+    font-size: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    bottom: 0;
+    left: 125;
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+@keyframes fadein {
+    0% {
+        bottom: -50px;
+    }
+    10% {
+        bottom: 0;
+    }
+    75% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -50px;
+    }
+}
+
+#snackbar.show_stay {
+    visibility: visible;
+    bottom: 0;
+    left: 125;
+    animation-name: fadein_stay;
+    animation-duration: 3s;
+}
+
+@keyframes fadein_stay {
+    0% {
+        bottom: -50px;
+    }
+    10% {
+        bottom: 0;
+    }
+}
+
+/* Toggle button from https://proto.io/freebies/onoff/*/
+
+.onoffswitch {
+    position: absolute;
+    width: 90px;
+    right: 5px;
+    bottom: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "Easy";
+    padding-left: 10px;
+    background-color: dodgerblue;
+    color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+    content: "Hard";
+    padding-right: 10px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 10px;
+    right: 56px;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+.difficulty-tag-easy {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 90px;
+    height: 25px;
+    border-top-left-radius: 10px;
+    background-color: dodgerblue;
+    text-align: center;
+    color: white;
+}
+
+.difficulty-tag-hard {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 90px;
+    height: 25px;
+    border-top-left-radius: 10px;
+    background-color: red;
+    text-align: center;
+    color: white;
+}

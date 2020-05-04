@@ -1,0 +1,22 @@
+button.blue_btn {
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+button.red_btn{
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.table_style{
+    color:#AB2009;
+    position:fixed;
+    left:45%;
+    top:50px;
+}
+th.table_style{
+    color:#AB2009;
+}
+td.table_style{
+    color:#CC9520;
+}

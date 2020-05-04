@@ -1,0 +1,117 @@
+body {
+    margin: auto;
+    padding: 0;
+    background-color: dodgerblue;
+}
+
+#root {
+    margin: auto;
+    width: 60vw;
+    overflow: auto;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.save {
+    position: fixed;
+    width: 100px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.add {
+    position: fixed;
+    right: 120px;
+    width: 100px;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.submit {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.test {
+    overflow: auto;
+    background-color: blue
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    left: 0;
+    bottom: -50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 1;
+    height: 50px;
+    font-size: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    bottom: 0;
+    left: 125;
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+@keyframes fadein {
+    0% {
+        bottom: -50px;
+    }
+    10% {
+        bottom: 0;
+    }
+    75% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -50px;
+    }
+}
+
+#snackbar.show_stay {
+    visibility: visible;
+    bottom: 0;
+    left: 125;
+    animation-name: fadein_stay;
+    animation-duration: 3s;
+}
+
+@keyframes fadein_stay {
+    0% {
+        bottom: -50px;
+    }
+    10% {
+        bottom: 0;
+    }
+}
